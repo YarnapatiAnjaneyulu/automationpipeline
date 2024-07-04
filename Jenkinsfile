@@ -7,7 +7,7 @@ pipeline {
           script {
             var1=100
             println "var1 value is ${var1}"
-            println "BRANCH_NAME is ${BRANCH_NAME}"
+            println "WORKSPACE is ${WORKSPACE}"
             println "BUILD_NUMBER is ${BUILD_NUMBER}"
           }
         }
