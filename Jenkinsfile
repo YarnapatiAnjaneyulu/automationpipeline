@@ -10,6 +10,16 @@ pipeline {
             println "value of a is ${a}"
             a = a + 1
           }
+
+          for(i=1;i<=10;i++) {
+            println "value of i is ${i}"
+          }
+          
+          lis1=[10,20,30,40]
+          for(ele in lis1){
+            println "my ele is ${ele}"
+          }
+          
         }
       }
     }
