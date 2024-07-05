@@ -5,7 +5,7 @@ pipeline {
     stage("working with conditions") {
       steps {
         script {
-          a=10
+          a=100
           b=20
           if(a>b) {
             println "value of a is ${a}"
