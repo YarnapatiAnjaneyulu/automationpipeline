@@ -1,14 +1,16 @@
 pipeline {
-  agent any 
+  // agent server1/any/dockeragent/kubernetes
+  agent any
   stages {
-    stage('working with file IO') {
+    stage("working with variables") {
       steps {
-        script {
-          File myfile = new File("/tmp/newfile.txt")
-          myfile.write("Hi Team welcome to Dvs devops")
-          println "content is ${myfile.text}"
+          script {
+            var1=100
+            println "var1 value is ${var1}"
+            println "WORKSPACE iS ${WORKSPACE}"
+            println "BUILD_NUMBER is ${BUILD_NUMBER}"
+          }
         }
       }
-    }
-  }
-}
+    } 
+} 
