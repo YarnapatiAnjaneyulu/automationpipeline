@@ -4,9 +4,7 @@ pipeline {
     stage('working with file IO') {
       steps {
         script {
-          def content = readFile 'sample.txt'
-echo "Pipeline ran successfully!"
-
+          File myfile = new File("/tmp/newfile.txt")
           myfile.write("Hi Team welcome to Dvs devops")
           println "content is ${myfile.text}"
         }
