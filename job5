@@ -11,7 +11,7 @@ pipeline {
              println "value of a is ${a}"
           }
           else {
-            println "value of b is big ${b}"
+            println "value of b is ${b}"
           }
         }
       }
