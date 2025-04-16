@@ -22,7 +22,8 @@ pipeline {
                     println "var1 value is ${var1}"
                     println "WORKSPACE is ${WORKSPACE}"
                     println "BUILD_NUMBER is ${BUILD_NUMBER}"
-                    println "My environment selected is ${params.ENV}"          
+                    println "my environment selected is ${params.ENV}"
+                    println "MY JAVA_HOME value is ${env.JAVA_HOME}"
                 }
             }
         }
