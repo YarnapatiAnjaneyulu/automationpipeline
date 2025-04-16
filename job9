@@ -1,14 +1,18 @@
 pipeline {
-  agent any
-  stages {
-    stage('working with file IO') {
-      steps {
-        script {
-         File myfile = new File("/tmp/newfile.txt")
-         myfile.write("hi team ")
-         println "content is ${myfile.txt}"
+    agent any
+
+    stages {
+        stage("working with file IO") {
+            steps {
+                script {
+                    // Write to a file
+                    writeFile file: 'test.txt', text: 'Hello Jenkins File IO!'
+
+                    // Read from a file
+                    def content = readFile('test.txt')
+                    echo "File Content: ${content}"
+                }
+            }
         }
-      } 
     }
-  }
 }
